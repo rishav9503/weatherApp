@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {  WiDayCloudy,	 WiFire, WiDayHaze,WiMoonAltWaningCrescent6, WiMoonAltWaningCrescent2,WiDayHail } from 'react-icons/wi';
 import './App.css';
-import {Jumbotron,Row,Col, Container} from 'react-bootstrap'
+import {Jumbotron,Row,Col} from 'react-bootstrap'
 
 const rowStyle={
   height:'370px',
@@ -57,11 +57,9 @@ class App extends Component {
             <h3 className='jumbo3'>React Weather App</h3>
             <h6 className="styleh6">You can get the daily forecast of your city here...</h6>
       </Jumbotron>
-      <Container fluid>
 
 
         <Row style={rowStyle}>
-        
           <Col>
           <h2 style={h1Style}>
             <span>   Bangalore, India< WiFire size="1.5em"/> </span>
@@ -81,13 +79,10 @@ class App extends Component {
          
         
           </Row>
-        
+          
                   
           </Col>
-
         </Row>
-        </Container>
-        <Container fluid>
 
         <Row style={row2Style}>
           <Col className='style1 mon'>  Tonight <WiMoonAltWaningCrescent6  size="2.5em"/></Col>
@@ -96,7 +91,7 @@ class App extends Component {
           <Col className='style1 fri'> {dayafter.toDateString()}<WiDayHail  size="2.5em"/> </Col>
           
         </Row>
-    </Container>
+
   
      
       </div>
