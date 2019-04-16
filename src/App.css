@@ -1,33 +1,36 @@
-.App {
-  text-align: center;
+.todayDetails{
+  font-size: 30px;
+  font-weight: bold;
+  height:200px;
+  margin: 5px;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.temp{
+      font-size: 40px;
+      
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.h8Style{
+  font-size:12px;
 }
-
-.App-link {
-  color: #61dafb;
+.style1{
+  background-image: linear-gradient( 135deg, rgb(30, 182, 253) 10%, rgb(17, 71, 187) 100%);
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px;
+  border:1px solid #ffffff;
 }
+.jumbo{
+  height:10px;
+  background-image: linear-gradient( 135deg, #3B2667 10%, #BC78EC 100%);
+  color:white;
+}
+.App{
+  background-image: linear-gradient( 135deg, rgb(35, 144, 245) 10%, #00E4FF 100%);
+ 
+}
+.styleh6{
+  font-style: italic;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.jumboh3{
+  font: bolder;
 }
