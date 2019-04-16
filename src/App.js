@@ -44,8 +44,22 @@ console.log(Tommorow,99)
 const dayafter=new Date(tom+17280000)
 
 class App extends Component {
+  state = {a:3,b:3,c:3,d:3}
   
   
+  changeSizeMon=(e)=>{
+   this.setState({a:4,b:2,c:3,d:3});
+  }
+  changeSizeTue=(e)=>{
+   this.setState({a:3,b:4,c:2,d:3});
+  }
+  changeSizeWed=(e)=>{
+   this.setState({a:3,b:3,c:4,d:2});
+  }
+  changeSizeFri=(e)=>{
+    console.log(e)
+   this.setState({a:3,b:3,c:2,d:4});
+  }
   render() {
     return (
       
@@ -90,10 +104,10 @@ class App extends Component {
         <Container fluid>
 
         <Row style={row2Style}>
-          <Col className='style1 mon'>  Tonight <WiMoonAltWaningCrescent6  size="2.5em"/></Col>
-          <Col className='style1 tue'>{Tommorow.toDateString()} <WiDayHaze size="3em"/></Col>
-          <Col className='style1 wed'>  {Tommorow.toDateString()}  Night <WiMoonAltWaningCrescent2  size="2.5em"/> </Col>
-          <Col className='style1 fri'> {dayafter.toDateString()}<WiDayHail  size="2.5em"/> </Col>
+          <Col className='style1 mon' xs={this.state.a}  onClick={this.changeSizeMon}>  Tonight <WiMoonAltWaningCrescent6  size="2.5em"/></Col>
+          <Col className='style1 tue' xs={this.state.b} onClick={this.changeSizeTue}>{Tommorow.toDateString()} <WiDayHaze size="3em"/></Col>
+          <Col className='style1 wed' xs={this.state.c} onClick={this.changeSizeWed}>  {Tommorow.toDateString()}  Night <WiMoonAltWaningCrescent2  size="2.5em"/> </Col>
+          <Col className='style1 fri' xs={this.state.d} onClick={this.changeSizeFri}> {dayafter.toDateString()}<WiDayHail  size="2.5em"/> </Col>
           
         </Row>
     </Container>
