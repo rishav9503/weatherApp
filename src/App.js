@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {  WiDayCloudy,	 WiFire, WiDayHaze,WiMoonAltWaningCrescent6, WiMoonAltWaningCrescent2,WiDayHail } from 'react-icons/wi';
+import {  WiDayCloudy,	  WiDayHaze,WiMoonAltWaningCrescent6, WiMoonAltWaningCrescent2,WiDayHail } from 'react-icons/wi';
 import './App.css';
 import {Jumbotron,Row,Col} from 'react-bootstrap'
 
@@ -17,11 +17,7 @@ const rowStyle={
   borderRadius:'5px'
  
 };
-const h1Style={
-  margin:'1%  35% 5% 35%',
-  fontSize:'28px',
-  fontWeight:'bold'
-}
+
 const row2Style={
  
  
@@ -69,14 +65,14 @@ class App extends Component {
         <Jumbotron className='jumbo'>
         
             <h3 className='jumbo3'>React Weather App</h3>
-            <h6 className="styleh6">You can get the daily forecast of your city here...</h6>
+        <h6 className="styleh6">You can get the daily forecast of your city here...</h6>
       </Jumbotron>
 
 
         <Row style={rowStyle}>
           <Col>
-          <h2 style={h1Style}>
-            <span>   Bangalore, India< WiFire size="1.5em"/> </span>
+          <h2 className="hStyle">
+               Bangalore, India
             <p style={h7style}>{date.toDateString()}</p>
           </h2>
           
@@ -99,10 +95,10 @@ class App extends Component {
         </Row>
 
         <Row style={row2Style}>
-          <Col className='style1 mon' xs={this.state.a}  onClick={this.changeSizeMon}>  Tonight <WiMoonAltWaningCrescent6  size="2.5em"/></Col>
-          <Col className='style1 tue' xs={this.state.b} onClick={this.changeSizeTue}>{Tommorow.toDateString()} <WiDayHaze size="3em"/></Col>
-          <Col className='style1 wed' xs={this.state.c} onClick={this.changeSizeWed}>  {Tommorow.toDateString()}  Night <WiMoonAltWaningCrescent2  size="2.5em"/> </Col>
-          <Col className='style1 fri' xs={this.state.d} onClick={this.changeSizeFri}> {dayafter.toDateString()}<WiDayHail  size="2.5em"/> </Col>
+          <Col className='style1 mon' sm={12} lg={this.state.a}  onClick={this.changeSizeMon}>  Tonight <WiMoonAltWaningCrescent6  size="2.5em"/></Col>
+          <Col className='style1 tue' sm={12} lg={this.state.b} onClick={this.changeSizeTue}>{Tommorow.toDateString()} <WiDayHaze size="3em"/></Col>
+          <Col className='style1 wed' sm={12} lg={this.state.c} onClick={this.changeSizeWed}>  {Tommorow.toDateString()}  Night <WiMoonAltWaningCrescent2  size="2.5em"/> </Col>
+          <Col className='style1 fri' sm={12} lg={this.state.d} onClick={this.changeSizeFri}> {dayafter.toDateString()}<WiDayHail  size="2.5em"/> </Col>
           
         </Row>
 

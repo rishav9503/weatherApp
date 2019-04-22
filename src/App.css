@@ -32,6 +32,21 @@
   font-style: italic;
 
 }
-.jumboh3{
+.jumbo3{
   font: bolder;
+}
+.h1Style{
+  margin:1%  35% 5% 35%;
+  font-size:29px;
+    font-weight:bold
+}
+
+@media  (max-width: 600px) {
+  .hStyle{
+    text-decoration: underline;
+    font-size: 20px;
+ }
+ .styleh6{
+   font-size: 9px;
+ }
 }
